@@ -21,7 +21,7 @@ using ExchangeSharp.BinanceGroup;
 using ExchangeSharp.Bitflyer;
 using ExchangeSharp.Bitstamp;
 using ExchangeSharp.Bybit;
-using ExchangeSharp.Coinbase;
+using ExchangeSharp.CoinbasePro;
 using ExchangeSharp.Kraken;
 using ExchangeSharp.KuCoin;
 using ExchangeSharp.NDAX;
@@ -846,7 +846,7 @@ namespace ExchangeSharp
 				string typeKeyIsBuyValue = "buy"
 		)
 		{
-			var trade = ParseTradeComponents<CoinbaseTrade>(
+			var trade = ParseTradeComponents<CoinbaseProTrade>(
 					token,
 					amountKey,
 					priceKey,

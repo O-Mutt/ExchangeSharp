@@ -1,20 +1,24 @@
 ### Building
 
 #### Required tools
- - [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) (you can check the exact version on `global.json` in the root folder).
+
+- [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) (you can check the exact version on `global.json` in the root folder).
 
 #### Editing (Optional tooling)
 
 On all platforms:
- - JetBrains Rider
- - VS Code (with C#/Omnisharp extension)
- - MonoDevelop
+
+- JetBrains Rider
+- VS Code (with C#/Omnisharp extension)
+- MonoDevelop
 
 On Windows:
- - Visual Studio 2019
+
+- Visual Studio 2019
 
 On Mac:
- - Visual Studio for Mac
+
+- Visual Studio for Mac
 
 ### Compiling
 
@@ -23,7 +27,7 @@ Windows: Open ExchangeSharp.sln in Visual Studio and build/run \
 
 #### Creating a release version
 
-##### From the command line (bash/powershell):
+##### From the command line (bash/powershell)
 
 `dotnet publish src/ExchangeSharpConsole -o $PWD/dist -c Release -r <RID>`
 

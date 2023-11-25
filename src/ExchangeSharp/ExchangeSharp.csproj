@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard20</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Copyright>Copyright 2017, Digital Ruby, LLC - www.digitalruby.com</Copyright>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

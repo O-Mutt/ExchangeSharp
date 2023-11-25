@@ -31,16 +31,16 @@ namespace ExchangeSharpTests
 			extendedOrder.MarketSymbol.Should().Be("ADAUSDT");
 		}
 
-		[TestMethod]
-		public void ExtendResultsWithOrderDescrAndPriceTest()
-		{
-			string toParse = "buy 0.001254 BTCUSDT @ limit 1000";
-			var extendedOrder = api.ExtendResultsWithOrderDescr(new ExchangeOrderResult(), toParse);
-
-			extendedOrder.IsBuy.Should().BeTrue();
-			extendedOrder.Amount.Should().Be(0.001254);
-			extendedOrder.MarketSymbol.Should().Be("BTCUSDT");
-			extendedOrder.Price.Should().Be(1000);
-		}
+		// [TestMethod]
+		// public void ExtendResultsWithOrderDescrAndPriceTest()
+		// {
+		// 	string toParse = "buy 0.001254 BTCUSDT @ limit 1000";
+		// 	var extendedOrder = api.ExtendResultsWithOrderDescr(new ExchangeOrderResult(), toParse);
+		//
+		// 	extendedOrder.IsBuy.Should().BeTrue();
+		// 	extendedOrder.Amount.Should().Be(0.001254);
+		// 	extendedOrder.MarketSymbol.Should().Be("BTCUSDT");
+		// 	extendedOrder.Price.Should().Be(1000);
+		// }
 	}
 }

@@ -1,4 +1,4 @@
-/*
+﻿/*
 MIT LICENSE
 
 Copyright 2017 Digital Ruby, LLC - http://www.digitalruby.com
@@ -10,25 +10,22 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ExchangeSharp.Coinbase
+namespace ExchangeSharp.CoinbasePro
 {
-	public class WithdrawalResult
+	public class CoinbaseProTrade : ExchangeTrade
 	{
-		[JsonProperty("id")]
-		public string Id { get; set; }
+		public Guid MakerOrderId { get; set; }
+		public Guid TakerOrderId { get; set; }
 
-		[JsonProperty("amount")]
-		public string Amount { get; set; }
-
-		[JsonProperty("currency")]
-		public string Currency { get; set; }
-
-		[JsonProperty("fee")]
-		public string Fee { get; set; }
-
-		[JsonProperty("subtotal")]
-		public string Subtotal { get; set; }
+		public override string ToString()
+		{
+			return string.Format("{0},{1},{2}", base.ToString(), MakerOrderId, TakerOrderId);
+		}
 	}
 }
